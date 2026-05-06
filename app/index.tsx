@@ -1,15 +1,21 @@
+import { Link } from "expo-router";
 import { Text, View } from "react-native";
 
-export default function Index() {
+export default function App() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text className="text-red-700">Hello World!</Text>
+    <View className="bg-background flex-1 items-center justify-center">
+      <Text className="text-success text-xl font-bold">
+        Welcome to Nativewind!
+      </Text>
+      <Link href="/onboarding" className="bg-primary m-1 p-4 text-white">
+        Onboarding
+      </Link>
+      <Link href="/(auth)/sign-in" className="bg-primary m-1 p-4 text-white">
+        Sign In
+      </Link>
+      <Link href="/(auth)/sign-up" className="bg-primary m-1 p-4 text-white">
+        Sign Up
+      </Link>
     </View>
   );
 }
